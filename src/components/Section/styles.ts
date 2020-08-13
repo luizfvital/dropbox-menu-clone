@@ -64,3 +64,9 @@ export const Content = styled.div`
 
   padding: var(--padding-top) 32px var(--padding-bottom);
 `
+
+export const HeaderWrapper = styled.div``
+
+export const Header = styled.div``
+
+export const DropboxLogo = styled.div``
