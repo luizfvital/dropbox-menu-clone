@@ -2,10 +2,10 @@ import React from 'react'
 
 import {
   Container,
-  Content,
   HeaderWrapper,
   Header,
   DropboxLogo,
+  Content,
 } from './styles'
 
 interface Props {
@@ -16,6 +16,11 @@ interface Props {
 
 const Section: React.FC<Props> = ({ variant, title, description }) => {
   const buttonVariant = Math.round(Math.random())
+
+  function handleToggle() {
+    if (window.toggleActiveMenu) window.toggleActiveMenu()
+  }
+
   return (
     <Container className={variant}>
       <HeaderWrapper>
@@ -25,7 +30,7 @@ const Section: React.FC<Props> = ({ variant, title, description }) => {
             <span>Dropbox</span>
           </h1>
 
-          <button type="button">
+          <button type="button" onClick={handleToggle}>
             {buttonVariant === 0 ? 'Interagir' : 'Acessar'}
           </button>
         </Header>
